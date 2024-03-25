@@ -1,0 +1,41 @@
+const mongoose=require('mongoose')
+
+//blog schema
+
+const blogsSchema=mongoose.Schema({
+    title:{
+        type:String,
+        require:true
+    },
+    headline:{
+        type:String,
+        require:true
+    },
+    subject:{
+        type:String,
+        require:true
+    },
+   content:{
+        type:String,
+        require:true
+    },
+    timestamp:{
+        type:String,
+        require:true
+    },
+    blogimg:{
+        type:String,
+        require:true
+    },
+    userid:{
+        type:String,
+        require:true
+    }
+})
+
+//create model
+
+const blogs=mongoose.model("blogs",blogsSchema)
+
+//export model
+module.exports=blogs
